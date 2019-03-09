@@ -1,0 +1,205 @@
+.Header{
+    background: #fff;
+   border-bottom:1px solid #f3faff;
+    color:$color-font;
+
+    .container{
+        display:flex;
+        height:50px;
+        margin-left:auto;
+        margin-right:auto;
+        align-items: center;
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+    &-left{
+        display:flex;
+        align-items: center;
+        margin-right:auto; 
+        &-hamburger{
+            font-size:1.7em; 
+            background-color:white;
+        }
+        &-logo{
+            display:flex;
+            align-items: center;
+            margin-left:$gutter;
+            img{
+                height: 40px
+            }
+            span{
+                @include mq("tablet"){
+                    display:flex;
+                }
+                display:none;
+                margin-left:$gutter;
+                color:#586474;
+                font-size:13px; 
+            }
+        }
+    }
+    &-menu{
+        display:flex;
+        margin-left:auto; 
+        align-items: center; 
+
+        &-user{
+            display:flex;
+            @include mq("tablet"){
+                margin-right:$gutter;
+                margin-left:$gutter;
+            }
+            margin-right:5px;
+            margin-left:5px;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                color:$color-font;
+                height:$finger-size;
+                padding-left:15px;
+                padding-right:15px;
+                justify-content: center;
+                margin-right:$gutter;
+                position:relative;
+                
+                &:nth-child(2), &:nth-child(3){
+                    display:none;
+                    @include mq("tablet"){
+                        display:flex;
+                    }
+                }
+                
+                .mgm-meteouyari{
+                   
+                    font-size:20px;
+}
+                    .mgm-meteouyari-sayisi {
+                        position: absolute;
+                        top:-3px;
+                        right:4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color:#EC5252;
+                        padding:10px;
+                        font-size:12px;
+                        border-radius:30px;
+                        height: 21px;
+                        width: 21px;
+                        color:#fff;
+                    
+                }
+                  
+            }
+            a:hover{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                height:$finger-size;
+                background-color:$color-shadowblue;
+                padding-left:15px;
+                padding-right:15px;
+                border-radius:33%;
+                
+            }
+        }
+        &-lang{
+            display: flex;
+            background-color:white;
+            font-size: 12px;
+
+
+            &-select{
+                display:none;
+                position:absolute;
+                border-radius: $border-radius;
+                padding:10px 15px;
+                line-height: 20px;
+                margin-top:39px;
+                margin-right:15px;
+                background-color:white;
+                z-index: 1; 
+                -webkit-box-shadow: 0px 4px 30px -4px rgba(0,51,90,0.1);
+                box-shadow: 0px 4px 30px -4px rgba(0,51,90,0.1);
+                a {
+                    display:flex;
+                    flex-direction: column;
+                    
+                    padding-bottom:7px;
+                }
+            }
+            &-button{
+            height: $finger-size;
+            padding-left:10px;
+            padding-right:10px;
+            margin-right:$gutter2x; 
+            border-radius:$border-radius;
+            background-color:white;
+            position: relative;
+
+          
+
+                &:hover {
+                    background:$color-backgroundblue;   
+                 }
+            
+            }
+            &:hover &-select {
+                display:block;  
+             }
+                 
+            }
+
+           
+
+        
+      
+        &-logo{
+            
+            img{
+                height: 40px;
+            }  
+        }
+    }
+  }
+
+  .Navigation {
+    @include mq("tablet"){
+        display:flex;
+       
+    }
+      display:none;
+      align-items: center;
+  
+height:56px;
+background:white;
+-webkit-box-shadow: 0px 4px 30px -4px rgba(0,51,90,0.1);
+box-shadow: 0px 4px 30px -4px rgba(0,51,90,0.1);
+border-bottom:2px solid #8eca4d;
+
+      
+    a {position:relative;
+        font-family: 'Raleway', sans-serif;
+        padding-right:$gutter;
+        padding-left:$gutter;
+        font-size: 13px;
+        color:$color-font;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        
+       
+     &:hover:after {
+        font-family: mgm2019;
+        content: 'f';
+        color:#8eca4d;
+        font-size:30px;
+        position: absolute;
+        bottom: -12px;
+        left: 20px;
+        width: 100%;
+        height: 16px;
+         
+     }
+    }
+  }
